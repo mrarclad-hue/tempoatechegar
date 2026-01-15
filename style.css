@@ -24,14 +24,12 @@ body {
     letter-spacing: 2px;
 }
 
-/* Wrapper Flex para colocar os containers lado a lado */
 .main-wrapper {
     display: flex;
     justify-content: center;
     gap: 2rem;
     width: 100%;
     max-width: 1200px;
-    /* Permite que quebre para linha de baixo em telas pequenas */
     flex-wrap: wrap; 
     margin-bottom: 2rem;
 }
@@ -42,9 +40,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     text-align: center;
-    /* Flex: grow shrink basis. Garante tamanho igual e responsividade */
     flex: 1 1 450px; 
-    min-width: 300px; /* Largura mínima para não quebrar o layout interno */
+    min-width: 300px;
 }
 
 h2 {
@@ -63,7 +60,7 @@ h2 {
 
 .timer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas para ficar mais compacto */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -75,7 +72,6 @@ h2 {
     transition: transform 0.3s;
 }
 
-/* Cor diferente para Caxias para diferenciar visualmente (opcional) */
 #caxias-timer .time-box {
     background: #34495e;
 }
@@ -98,17 +94,17 @@ h2 {
 }
 
 .today-info {
-    margin-top: auto; /* Empurra para o final se houver espaço */
+    margin-bottom: 2rem;
     padding: 1rem;
     background: #e9ecef;
     border-radius: 30px;
     font-weight: bold;
     color: #555;
+    text-align: center;
 }
 
-/* Responsividade para telas muito pequenas */
 @media (max-width: 400px) {
     .timer-grid {
-        grid-template-columns: repeat(2, 1fr); /* Muda para 2 colunas em celulares pequenos */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
