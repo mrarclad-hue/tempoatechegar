@@ -2,7 +2,7 @@
 // Lembre-se: Mês em JS começa em 0 (Janeiro = 0, Dezembro = 11)
 
 // Data para o Piauí (Exemplo: 01 de Março de 2026)
-const datePiaui = new Date(2026, 2, 17,08, 00, 0); 
+const datePiaui = new Date(2026, 2, 1,08, 00, 0); 
 
 // Data para Caxias (Exemplo: 12 de Abril de 2026)
 const dateCaxias = new Date(2026, 3, 12, 8, 0, 0);
