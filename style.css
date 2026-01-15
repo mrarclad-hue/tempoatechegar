@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 2rem;
+    min-height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    text-align: center;
+    color: #1a252f;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Wrapper Flex para colocar os containers lado a lado */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    /* Permite que quebre para linha de baixo em telas pequenas */
+    flex-wrap: wrap; 
+    margin-bottom: 2rem;
+}
+
+.timer-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    /* Flex: grow shrink basis. Garante tamanho igual e responsividade */
+    flex: 1 1 450px; 
+    min-width: 300px; /* Largura mínima para não quebrar o layout interno */
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.date-info {
+    margin-bottom: 2rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.timer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas para ficar mais compacto */
+    gap: 1rem;
+}
+
+.time-box {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Cor diferente para Caxias para diferenciar visualmente (opcional) */
+#caxias-timer .time-box {
+    background: #34495e;
+}
+
+.time-box:hover {
+    transform: translateY(-5px);
+}
+
+.time-box span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+}
+
+.time-box p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.today-info {
+    margin-top: auto; /* Empurra para o final se houver espaço */
+    padding: 1rem;
+    background: #e9ecef;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 400px) {
+    .timer-grid {
+        grid-template-columns: repeat(2, 1fr); /* Muda para 2 colunas em celulares pequenos */
+    }
+}
